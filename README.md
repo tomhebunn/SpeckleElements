@@ -16,6 +16,7 @@ A work in progress, revit-centric, object model and its conversion routines to a
 - FamilyInstance (from revit only) - covers all families without an explicit conversion routine (ie, doors)
 - GenericElement (from revit only) - covers everything else not explicitely covered
 - Room
+- Space
 
 These are early days and the following are not battle tested. 
 
@@ -45,6 +46,11 @@ Most of these elements inherit from a SpeckleMesh (from SpeckleCoreGeometry). Wh
 
 **Rooms**:
 - Only out of revit please. 
+
+**Spaces**
+- See Rooms
+- Needs checking
+- May need a routine to check if spaces pulled are located in the model. Not sure if it matters.
 
 **GenericElement**: 
 - anything that we don't know how to convert goes in here.
