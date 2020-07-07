@@ -19,7 +19,7 @@ namespace SpeckleElementsRevit
             var speckleSpace = new Space();
 
             // get name and reference / number for space
-            speckleSpace.spaceName = mySpace.get_Parameter(Autodesk.Revit.DB.SpatialElement.Name).AsString();
+            speckleSpace.spaceName = mySpace.Name;
             speckleSpace.spaceNumber = mySpace.Number;
 
             //get space location 

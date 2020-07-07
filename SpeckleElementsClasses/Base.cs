@@ -999,3 +999,73 @@ namespace SpeckleElementsClasses
   }
 
 }
+
+[Serializable]
+  public partial class Space : SpeckleMesh //, ISpeckleElement
+  {
+    public override string Type { get => base.Type + "/" + "Space"; }
+    [JsonIgnore]
+    public string elementId
+    {
+      get => (Properties != null && Properties.ContainsKey("elementId")) ? ((string)Properties["elementId"]) : null;
+      set => Properties["elementId"] = value;
+    }
+
+    [JsonIgnore]
+    public SpeckleObject baseCurve
+    {
+      get => (Properties != null && Properties.ContainsKey("baseCurve")) ? ((SpeckleObject)Properties["baseCurve"]) : null;
+      set => Properties["baseCurve"] = value;
+    }
+
+    [JsonIgnore]
+    public SpecklePoint spaceLocation
+    {
+      get => (Properties != null && Properties.ContainsKey("spaceLocation")) ? ((SpecklePoint)Properties["spaceLocation"]) : null;
+      set => Properties["spaceLocation"] = value;
+    }
+
+    [JsonIgnore]
+    public string spaceName
+    {
+      get => (Properties != null && Properties.ContainsKey("spaceName")) ? ((string)Properties["spaceName"]) : null;
+      set => Properties["spaceName"] = value;
+    }
+
+    [JsonIgnore]
+    public string spaceNumber
+    {
+      get => (Properties != null && Properties.ContainsKey("spaceNumber")) ? ((string)Properties["spaceNumber"]) : null;
+      set => Properties["spaceNumber"] = value;
+    }
+
+    [JsonIgnore]
+    public double spaceArea
+    {
+      get => (Properties != null && Properties.ContainsKey("spaceArea")) ? ((double)Properties["spaceArea"]) : 0;
+      set => Properties["spaceArea"] = value;
+    }
+
+    [JsonIgnore]
+    public double roomVolume
+    {
+      get => (Properties != null && Properties.ContainsKey("spaceVolume")) ? ((double)Properties["spaceVolume"]) : 0;
+      set => Properties["spaceVolume"] = value;
+    }
+
+    [JsonIgnore]
+    public Dictionary<string, object> parameters
+    {
+      get => (Properties != null && Properties.ContainsKey("parameters")) ? (Properties["parameters"] as Dictionary<string, object>) : null;
+      set => Properties["parameters"] = value;
+    }
+
+    [JsonIgnore]
+    public Dictionary<string, object> typeParameters
+    {
+      get => (Properties != null && Properties.ContainsKey("typeParameters")) ? (Properties["typeParameters"] as Dictionary<string, object>) : null;
+      set => Properties["typeParameters"] = value;
+    }
+
+    public Space() { }
+  }
