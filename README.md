@@ -49,7 +49,6 @@ Most of these elements inherit from a SpeckleMesh (from SpeckleCoreGeometry). Wh
 
 **Spaces**
 - See Rooms
-- Needs checking
 - May need a routine to check if spaces pulled are located in the model. Not sure if it matters.
 
 **GenericElement**: 

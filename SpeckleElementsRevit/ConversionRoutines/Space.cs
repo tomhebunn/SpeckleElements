@@ -40,7 +40,7 @@ namespace SpeckleElementsRevit
 
             speckleSpace.baseCurve = myPolyCurve;
             speckleSpace.parameters = GetElementParams( mySpace );
-            speckleSpace.typeParameters = GetElementTypeParams( mySpace );
+            // speckleSpace.typeParameters = GetElementTypeParams( mySpace );
 
             speckleSpace.ApplicationId = mySpace.UniqueId;
             speckleSpace.elementId = mySpace.Id.ToString();
